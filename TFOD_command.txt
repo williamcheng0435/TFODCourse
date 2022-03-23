@@ -1,0 +1,19 @@
+
+//install VS Code
+sudo apt update
+sudo apt install code
+
+//clone project
+cd /home/pi/Desktop
+git clone https://github.com/williamcheng0435/TFODCourse/
+cd TFODCourse
+
+//setup virtual environment
+python3 -m venv tfod
+source tfod/bin/activate
+python3 -m pip install pip --upgrade
+
+//install and run jupyter notebook
+pip3 install jupyter
+python -m ipykernel install --user --name=tfod
+jupyer-notebook
